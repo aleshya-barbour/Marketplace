@@ -10,7 +10,7 @@ import {
   Link
 } from "react-router-dom";
 
-import Products from './Products'
+import Products from './Items'
 import Cart from './Cart';
 import Home from './Home';
 import About from './About'
