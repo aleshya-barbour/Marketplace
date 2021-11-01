@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CartItem from './CartItem';
+import { Link } from 'react-router-dom';
 
 class Cart extends Component {
     constructor(props) {
@@ -56,11 +57,22 @@ class Cart extends Component {
 
     render() {
         return (
+          <>
           <div className="cart">
             <h4 className="cart__heading">Your Shopping Cart</h4>
             { this.renderEmptyCart() }
             { this.renderCart() }
           </div>
+          <div className="cart__footer">
+            <button className="cart__btn-empty" onClick={this.handleEmptyCart}>Empty Cart</button>
+            <Link
+              className="cart__btn-checkout"
+              to="/checkout"
+            >
+              Checkout
+            </Link>
+          </div>
+        </>
         );
     };
 };
